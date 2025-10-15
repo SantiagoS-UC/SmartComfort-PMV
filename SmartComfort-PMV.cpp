@@ -15,7 +15,7 @@ DHT dht(DHTPIN, DHTTYPE);
 // Sensor NTC (temperatura ambiente adicional)
 const int pinNTC = A0;
 
-// Pines de control de relés (ventilador y calefactor)
+// Pines de control de relés (ventilador y servo)
 const int pinVentilador = 2;
 const int pinCalefactor = 3;
 
