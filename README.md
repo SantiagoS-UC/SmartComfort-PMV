@@ -71,6 +71,10 @@ Puedes sugerir mejoras en el cálculo de PMV, agregar más sensores o refinar la
 
 ---
 
-**Autor:** Santiago Solarte  
+**Participantes:** 
+Valentina Añasco 
+Camila Dorado
+Ginner Ortega
+Santiago Solarte  
 **Proyecto de ingeniería de sistemas**
 
