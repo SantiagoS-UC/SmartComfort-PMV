@@ -61,20 +61,13 @@ Este repositorio contiene:
 
 - Código fuente completo (`.cpp`, `.h`)  
 - Archivos de proyecto de Visual Studio (`.sln`, `.vcxproj`)  
-- Ejemplo de configuración de tarjetas y parámetros PMV  
 
 ---
 
-## Contribuciones
+**Participantes:**
 
-Puedes sugerir mejoras en el cálculo de PMV, agregar más sensores o refinar la interfaz de usuario.  
-
----
-
-**Participantes:** 
-Valentina Añasco 
-Camila Dorado
-Ginner Ortega
-Santiago Solarte  
-**Proyecto de ingeniería de sistemas**
+- Valentina Añasco 
+- Camila Dorado
+- Ginner Ortega
+- Santiago Solarte  
 
