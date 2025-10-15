@@ -1,0 +1,797 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SmartComfort-PMV: Referencia del archivo C:/Users/Asus/OneDrive/Universidad/Quinto Semestre/Arquitectura Computacional/SmartComfort-PMV/SmartComfort-PMV.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SmartComfort-PMV<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">sistema inteligente de control y monitoreo ambiental desarrollado con Arduino. Su objetivo principal es medir y gestionar las condiciones ambientales de un espacio cerrado para mantener el confort térmico óptimo según el índice PMV</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_4e1526365f4def8a9d30b2dcc514d7a7.html">SmartComfort-PMV</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#enum-members">Enumeraciones</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo SmartComfort-PMV.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;LiquidCrystal.h&gt;</code><br />
+<code>#include &lt;Keypad.h&gt;</code><br />
+<code>#include &quot;DHT.h&quot;</code><br />
+<code>#include &lt;ezButton.h&gt;</code><br />
+<code>#include &lt;millisDelay.h&gt;</code><br />
+<code>#include &lt;StateMachine.h&gt;</code><br />
+</div>
+<p><a href="_smart_comfort-_p_m_v_8cpp_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a757bb4e2bff6148de6ef3989b32a0126" id="r_a757bb4e2bff6148de6ef3989b32a0126"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a757bb4e2bff6148de6ef3989b32a0126">DHTPIN</a>&#160;&#160;&#160;9</td></tr>
+<tr class="memitem:a2c509dba12bba99883a5be9341b7a0c5" id="r_a2c509dba12bba99883a5be9341b7a0c5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c509dba12bba99883a5be9341b7a0c5">DHTTYPE</a>&#160;&#160;&#160;DHT22</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:a080a822f0093973313bd644e517a5090" id="r_a080a822f0093973313bd644e517a5090"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a080a822f0093973313bd644e517a5090">Input</a> { <br />
+&#160;&#160;<a class="el" href="#a080a822f0093973313bd644e517a5090a098f566f273b9d4eef0258bbccea96d4">desconocido</a>
+, <a class="el" href="#a080a822f0093973313bd644e517a5090a87f2694f35f05496c771b407fee4c811">dht</a>
+, <a class="el" href="#a080a822f0093973313bd644e517a5090aa9fcd2746d0df11b7dc782b3f3f8e979">ntc</a>
+, <a class="el" href="#a080a822f0093973313bd644e517a5090ad297ef6aab3b5f355b27fae80dc0a6be">pmv</a>
+, <br />
+&#160;&#160;<a class="el" href="#a080a822f0093973313bd644e517a5090a6b1f1dab0396a4c5fbb001f902b4739d">tiempo</a>
+<br />
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:ad7a1df263f6f823242a112ec11297434" id="r_ad7a1df263f6f823242a112ec11297434"><td class="memItemLeft" align="right" valign="top">DHT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7a1df263f6f823242a112ec11297434">dht</a> (<a class="el" href="#a757bb4e2bff6148de6ef3989b32a0126">DHTPIN</a>, <a class="el" href="#a2c509dba12bba99883a5be9341b7a0c5">DHTTYPE</a>)</td></tr>
+<tr class="memitem:afa669a0e0a94059d7da68f344bacde85" id="r_afa669a0e0a94059d7da68f344bacde85"><td class="memItemLeft" align="right" valign="top">LiquidCrystal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa669a0e0a94059d7da68f344bacde85">lcd</a> (13, 12, 11, 10, 8, 7)</td></tr>
+<tr class="memitem:ab5419c9a0e3ac372a927455985e2e380" id="r_ab5419c9a0e3ac372a927455985e2e380"><td class="memItemLeft" align="right" valign="top">ezButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5419c9a0e3ac372a927455985e2e380">botonBloqueo</a> (1)</td></tr>
+<tr class="memitem:adea994e4e9ab2bb7c38d31d3f5879fc6" id="r_adea994e4e9ab2bb7c38d31d3f5879fc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adea994e4e9ab2bb7c38d31d3f5879fc6">mostrarMensaje</a> (String mensaje)</td></tr>
+<tr class="memitem:a61d9cb3eb0d1604fe6ab8178db092805" id="r_a61d9cb3eb0d1604fe6ab8178db092805"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a080a822f0093973313bd644e517a5090">Input</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61d9cb3eb0d1604fe6ab8178db092805">leerEntrada</a> ()</td></tr>
+<tr class="memitem:aed78e5ac12f801d1b43332025f474b5f" id="r_aed78e5ac12f801d1b43332025f474b5f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed78e5ac12f801d1b43332025f474b5f">calcularPMV</a> (float temperatura, float humedad)</td></tr>
+<tr class="memitem:a0f66d65ae208fa0a707755d77441dd5f" id="r_a0f66d65ae208fa0a707755d77441dd5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f66d65ae208fa0a707755d77441dd5f">setupStateMachine</a> ()</td></tr>
+<tr class="memitem:ab079014b062f8dc5bcd90e1663753024" id="r_ab079014b062f8dc5bcd90e1663753024"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab079014b062f8dc5bcd90e1663753024">mostrarPMV</a> (float <a class="el" href="#a080a822f0093973313bd644e517a5090ad297ef6aab3b5f355b27fae80dc0a6be">pmv</a>)</td></tr>
+<tr class="memitem:a4c1f6be0d7f3a036a6a1d2c12359c629" id="r_a4c1f6be0d7f3a036a6a1d2c12359c629"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c1f6be0d7f3a036a6a1d2c12359c629">controlarClima</a> (float <a class="el" href="#a080a822f0093973313bd644e517a5090ad297ef6aab3b5f355b27fae80dc0a6be">pmv</a>)</td></tr>
+<tr class="memitem:ace25b45c6b28ab655e8c943e7b681f6c" id="r_ace25b45c6b28ab655e8c943e7b681f6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace25b45c6b28ab655e8c943e7b681f6c">controlManual</a> ()</td></tr>
+<tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d" id="r_a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
+<tr class="memitem:afe461d27b9c48d5921c00d521181f12f" id="r_afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ae10ddc75d364777806fd94e12c5a6530" id="r_ae10ddc75d364777806fd94e12c5a6530"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae10ddc75d364777806fd94e12c5a6530">pinNTC</a> = A0</td></tr>
+<tr class="memitem:ac5d94783567ef618f38873d3d683252a" id="r_ac5d94783567ef618f38873d3d683252a"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5d94783567ef618f38873d3d683252a">pinVentilador</a> = 2</td></tr>
+<tr class="memitem:a0804d489d3ce9556ddf20778350e57a8" id="r_a0804d489d3ce9556ddf20778350e57a8"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0804d489d3ce9556ddf20778350e57a8">pinCalefactor</a> = 3</td></tr>
+<tr class="memitem:a1b0a507060ec09e2d087b525c346e60f" id="r_a1b0a507060ec09e2d087b525c346e60f"><td class="memItemLeft" align="right" valign="top">const byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b0a507060ec09e2d087b525c346e60f">filas</a> = 4</td></tr>
+<tr class="memitem:afee0d3cc829d88d34ffa52201732f71a" id="r_afee0d3cc829d88d34ffa52201732f71a"><td class="memItemLeft" align="right" valign="top">const byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afee0d3cc829d88d34ffa52201732f71a">columnas</a> = 4</td></tr>
+<tr class="memitem:a5a7f5fbd5fbbb5f19bf7bd6b960352e2" id="r_a5a7f5fbd5fbbb5f19bf7bd6b960352e2"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a7f5fbd5fbbb5f19bf7bd6b960352e2">teclas</a> [<a class="el" href="#a1b0a507060ec09e2d087b525c346e60f">filas</a>][<a class="el" href="#afee0d3cc829d88d34ffa52201732f71a">columnas</a>]</td></tr>
+<tr class="memitem:aa30a9a3f3d2b0016598b753e71849884" id="r_aa30a9a3f3d2b0016598b753e71849884"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa30a9a3f3d2b0016598b753e71849884">pinesFilas</a> [<a class="el" href="#a1b0a507060ec09e2d087b525c346e60f">filas</a>] = {A1, A2, A3, A4}</td></tr>
+<tr class="memitem:a37ed6e9467f3229c9a74fa1e135f241a" id="r_a37ed6e9467f3229c9a74fa1e135f241a"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37ed6e9467f3229c9a74fa1e135f241a">pinesColumnas</a> [<a class="el" href="#afee0d3cc829d88d34ffa52201732f71a">columnas</a>] = {A5, 6, 5, 4}</td></tr>
+<tr class="memitem:aea7a1b4fab75ae5bad9fbbc61bdb5289" id="r_aea7a1b4fab75ae5bad9fbbc61bdb5289"><td class="memItemLeft" align="right" valign="top">Keypad&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea7a1b4fab75ae5bad9fbbc61bdb5289">teclado</a> = Keypad(makeKeymap(<a class="el" href="#a5a7f5fbd5fbbb5f19bf7bd6b960352e2">teclas</a>), <a class="el" href="#aa30a9a3f3d2b0016598b753e71849884">pinesFilas</a>, <a class="el" href="#a37ed6e9467f3229c9a74fa1e135f241a">pinesColumnas</a>, <a class="el" href="#a1b0a507060ec09e2d087b525c346e60f">filas</a>, <a class="el" href="#afee0d3cc829d88d34ffa52201732f71a">columnas</a>)</td></tr>
+<tr class="memitem:ad4db59ccea8946af2bb70f8269e99eeb" id="r_ad4db59ccea8946af2bb70f8269e99eeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a080a822f0093973313bd644e517a5090">Input</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4db59ccea8946af2bb70f8269e99eeb">input</a> = <a class="el" href="#a080a822f0093973313bd644e517a5090a098f566f273b9d4eef0258bbccea96d4">desconocido</a></td></tr>
+<tr class="memitem:a2f0b95776d2f6c3d37cec7267a8e04a9" id="r_a2f0b95776d2f6c3d37cec7267a8e04a9"><td class="memItemLeft" align="right" valign="top">StateMachine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f0b95776d2f6c3d37cec7267a8e04a9">stateMachine</a></td></tr>
+<tr class="memitem:ad5a4458b528428839dddbe9b25cd56f2" id="r_ad5a4458b528428839dddbe9b25cd56f2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5a4458b528428839dddbe9b25cd56f2">temperaturaDHT</a></td></tr>
+<tr class="memitem:aa967f1295697aa3ad0380cb4bb43c76d" id="r_aa967f1295697aa3ad0380cb4bb43c76d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa967f1295697aa3ad0380cb4bb43c76d">humedadDHT</a></td></tr>
+<tr class="memitem:a9a6abe409c5dbfda9c1537e04b1b4c11" id="r_a9a6abe409c5dbfda9c1537e04b1b4c11"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a6abe409c5dbfda9c1537e04b1b4c11">temperaturaNTC</a></td></tr>
+<tr class="memitem:afcd9a269fb8ae68c122682b48e309553" id="r_afcd9a269fb8ae68c122682b48e309553"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcd9a269fb8ae68c122682b48e309553">temperaturaMedia</a></td></tr>
+<tr class="memitem:a46b428456d05a4b83837e0734756a07c" id="r_a46b428456d05a4b83837e0734756a07c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46b428456d05a4b83837e0734756a07c">temperaturaIdeal</a></td></tr>
+<tr class="memitem:af6e086217ffe04a41e27977c93581162" id="r_af6e086217ffe04a41e27977c93581162"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6e086217ffe04a41e27977c93581162">pmv_actual</a></td></tr>
+<tr class="memitem:ac4394064fbf6bde1ba184aecb9523400" id="r_ac4394064fbf6bde1ba184aecb9523400"><td class="memItemLeft" align="right" valign="top">millisDelay&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4394064fbf6bde1ba184aecb9523400">temporizador</a></td></tr>
+<tr class="memitem:af8178f4f8cc1925e28888055cd4bc3b4" id="r_af8178f4f8cc1925e28888055cd4bc3b4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8178f4f8cc1925e28888055cd4bc3b4">sistemaBloqueado</a> = false</td></tr>
+<tr class="memitem:ae2b3e9605cb08286333b8eef2936c5b4" id="r_ae2b3e9605cb08286333b8eef2936c5b4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2b3e9605cb08286333b8eef2936c5b4">sistemaPausado</a> = false</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a757bb4e2bff6148de6ef3989b32a0126" name="a757bb4e2bff6148de6ef3989b32a0126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a757bb4e2bff6148de6ef3989b32a0126">&#9670;&#160;</a></span>DHTPIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DHTPIN&#160;&#160;&#160;9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00011">11</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2c509dba12bba99883a5be9341b7a0c5" name="a2c509dba12bba99883a5be9341b7a0c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c509dba12bba99883a5be9341b7a0c5">&#9670;&#160;</a></span>DHTTYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DHTTYPE&#160;&#160;&#160;DHT22</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00012">12</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentación de enumeraciones</h2>
+<a id="a080a822f0093973313bd644e517a5090" name="a080a822f0093973313bd644e517a5090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a080a822f0093973313bd644e517a5090">&#9670;&#160;</a></span>Input</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a080a822f0093973313bd644e517a5090">Input</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="a080a822f0093973313bd644e517a5090a098f566f273b9d4eef0258bbccea96d4" name="a080a822f0093973313bd644e517a5090a098f566f273b9d4eef0258bbccea96d4"></a>desconocido&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a080a822f0093973313bd644e517a5090a87f2694f35f05496c771b407fee4c811" name="a080a822f0093973313bd644e517a5090a87f2694f35f05496c771b407fee4c811"></a>dht&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a080a822f0093973313bd644e517a5090aa9fcd2746d0df11b7dc782b3f3f8e979" name="a080a822f0093973313bd644e517a5090aa9fcd2746d0df11b7dc782b3f3f8e979"></a>ntc&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a080a822f0093973313bd644e517a5090ad297ef6aab3b5f355b27fae80dc0a6be" name="a080a822f0093973313bd644e517a5090ad297ef6aab3b5f355b27fae80dc0a6be"></a>pmv&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a080a822f0093973313bd644e517a5090a6b1f1dab0396a4c5fbb001f902b4739d" name="a080a822f0093973313bd644e517a5090a6b1f1dab0396a4c5fbb001f902b4739d"></a>tiempo&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00040">40</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="ab5419c9a0e3ac372a927455985e2e380" name="ab5419c9a0e3ac372a927455985e2e380"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5419c9a0e3ac372a927455985e2e380">&#9670;&#160;</a></span>botonBloqueo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ezButton botonBloqueo </td>
+          <td>(</td>
+          <td class="paramtype">1</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed78e5ac12f801d1b43332025f474b5f" name="aed78e5ac12f801d1b43332025f474b5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed78e5ac12f801d1b43332025f474b5f">&#9670;&#160;</a></span>calcularPMV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float calcularPMV </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>temperatura</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>humedad</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00198">198</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4c1f6be0d7f3a036a6a1d2c12359c629" name="a4c1f6be0d7f3a036a6a1d2c12359c629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c1f6be0d7f3a036a6a1d2c12359c629">&#9670;&#160;</a></span>controlarClima()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void controlarClima </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>pmv</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00244">244</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ace25b45c6b28ab655e8c943e7b681f6c" name="ace25b45c6b28ab655e8c943e7b681f6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace25b45c6b28ab655e8c943e7b681f6c">&#9670;&#160;</a></span>controlManual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void controlManual </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00268">268</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad7a1df263f6f823242a112ec11297434" name="ad7a1df263f6f823242a112ec11297434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7a1df263f6f823242a112ec11297434">&#9670;&#160;</a></span>dht()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DHT dht </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a757bb4e2bff6148de6ef3989b32a0126">DHTPIN</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a2c509dba12bba99883a5be9341b7a0c5">DHTTYPE</a></td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa669a0e0a94059d7da68f344bacde85" name="afa669a0e0a94059d7da68f344bacde85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa669a0e0a94059d7da68f344bacde85">&#9670;&#160;</a></span>lcd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LiquidCrystal lcd </td>
+          <td>(</td>
+          <td class="paramtype">13</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">12</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">11</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">10</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">8</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">7</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a61d9cb3eb0d1604fe6ab8178db092805" name="a61d9cb3eb0d1604fe6ab8178db092805"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61d9cb3eb0d1604fe6ab8178db092805">&#9670;&#160;</a></span>leerEntrada()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a080a822f0093973313bd644e517a5090">Input</a> leerEntrada </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00134">134</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afe461d27b9c48d5921c00d521181f12f" name="afe461d27b9c48d5921c00d521181f12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe461d27b9c48d5921c00d521181f12f">&#9670;&#160;</a></span>loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00106">106</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="adea994e4e9ab2bb7c38d31d3f5879fc6" name="adea994e4e9ab2bb7c38d31d3f5879fc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adea994e4e9ab2bb7c38d31d3f5879fc6">&#9670;&#160;</a></span>mostrarMensaje()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarMensaje </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>mensaje</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00289">289</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab079014b062f8dc5bcd90e1663753024" name="ab079014b062f8dc5bcd90e1663753024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab079014b062f8dc5bcd90e1663753024">&#9670;&#160;</a></span>mostrarPMV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarPMV </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>pmv</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00300">300</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4fc01d736fe50cf5b977f755b675f11d" name="a4fc01d736fe50cf5b977f755b675f11d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc01d736fe50cf5b977f755b675f11d">&#9670;&#160;</a></span>setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setup </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00080">80</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0f66d65ae208fa0a707755d77441dd5f" name="a0f66d65ae208fa0a707755d77441dd5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f66d65ae208fa0a707755d77441dd5f">&#9670;&#160;</a></span>setupStateMachine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setupStateMachine </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00210">210</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
+<a id="afee0d3cc829d88d34ffa52201732f71a" name="afee0d3cc829d88d34ffa52201732f71a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afee0d3cc829d88d34ffa52201732f71a">&#9670;&#160;</a></span>columnas</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const byte columnas = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00027">27</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1b0a507060ec09e2d087b525c346e60f" name="a1b0a507060ec09e2d087b525c346e60f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b0a507060ec09e2d087b525c346e60f">&#9670;&#160;</a></span>filas</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const byte filas = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00026">26</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa967f1295697aa3ad0380cb4bb43c76d" name="aa967f1295697aa3ad0380cb4bb43c76d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa967f1295697aa3ad0380cb4bb43c76d">&#9670;&#160;</a></span>humedadDHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float humedadDHT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00053">53</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad4db59ccea8946af2bb70f8269e99eeb" name="ad4db59ccea8946af2bb70f8269e99eeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4db59ccea8946af2bb70f8269e99eeb">&#9670;&#160;</a></span>input</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a080a822f0093973313bd644e517a5090">Input</a> input = <a class="el" href="#a080a822f0093973313bd644e517a5090a098f566f273b9d4eef0258bbccea96d4">desconocido</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00048">48</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0804d489d3ce9556ddf20778350e57a8" name="a0804d489d3ce9556ddf20778350e57a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0804d489d3ce9556ddf20778350e57a8">&#9670;&#160;</a></span>pinCalefactor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int pinCalefactor = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00020">20</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a37ed6e9467f3229c9a74fa1e135f241a" name="a37ed6e9467f3229c9a74fa1e135f241a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37ed6e9467f3229c9a74fa1e135f241a">&#9670;&#160;</a></span>pinesColumnas</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte pinesColumnas[<a class="el" href="#afee0d3cc829d88d34ffa52201732f71a">columnas</a>] = {A5, 6, 5, 4}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00035">35</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa30a9a3f3d2b0016598b753e71849884" name="aa30a9a3f3d2b0016598b753e71849884"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa30a9a3f3d2b0016598b753e71849884">&#9670;&#160;</a></span>pinesFilas</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte pinesFilas[<a class="el" href="#a1b0a507060ec09e2d087b525c346e60f">filas</a>] = {A1, A2, A3, A4}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00034">34</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae10ddc75d364777806fd94e12c5a6530" name="ae10ddc75d364777806fd94e12c5a6530"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae10ddc75d364777806fd94e12c5a6530">&#9670;&#160;</a></span>pinNTC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int pinNTC = A0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00016">16</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac5d94783567ef618f38873d3d683252a" name="ac5d94783567ef618f38873d3d683252a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5d94783567ef618f38873d3d683252a">&#9670;&#160;</a></span>pinVentilador</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int pinVentilador = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00019">19</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af6e086217ffe04a41e27977c93581162" name="af6e086217ffe04a41e27977c93581162"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6e086217ffe04a41e27977c93581162">&#9670;&#160;</a></span>pmv_actual</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float pmv_actual</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00055">55</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af8178f4f8cc1925e28888055cd4bc3b4" name="af8178f4f8cc1925e28888055cd4bc3b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8178f4f8cc1925e28888055cd4bc3b4">&#9670;&#160;</a></span>sistemaBloqueado</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sistemaBloqueado = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00064">64</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae2b3e9605cb08286333b8eef2936c5b4" name="ae2b3e9605cb08286333b8eef2936c5b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2b3e9605cb08286333b8eef2936c5b4">&#9670;&#160;</a></span>sistemaPausado</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sistemaPausado = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00065">65</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2f0b95776d2f6c3d37cec7267a8e04a9" name="a2f0b95776d2f6c3d37cec7267a8e04a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f0b95776d2f6c3d37cec7267a8e04a9">&#9670;&#160;</a></span>stateMachine</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">StateMachine stateMachine</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00049">49</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aea7a1b4fab75ae5bad9fbbc61bdb5289" name="aea7a1b4fab75ae5bad9fbbc61bdb5289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea7a1b4fab75ae5bad9fbbc61bdb5289">&#9670;&#160;</a></span>teclado</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Keypad teclado = Keypad(makeKeymap(<a class="el" href="#a5a7f5fbd5fbbb5f19bf7bd6b960352e2">teclas</a>), <a class="el" href="#aa30a9a3f3d2b0016598b753e71849884">pinesFilas</a>, <a class="el" href="#a37ed6e9467f3229c9a74fa1e135f241a">pinesColumnas</a>, <a class="el" href="#a1b0a507060ec09e2d087b525c346e60f">filas</a>, <a class="el" href="#afee0d3cc829d88d34ffa52201732f71a">columnas</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00036">36</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5a7f5fbd5fbbb5f19bf7bd6b960352e2" name="a5a7f5fbd5fbbb5f19bf7bd6b960352e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a7f5fbd5fbbb5f19bf7bd6b960352e2">&#9670;&#160;</a></span>teclas</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char teclas[<a class="el" href="#a1b0a507060ec09e2d087b525c346e60f">filas</a>][<a class="el" href="#afee0d3cc829d88d34ffa52201732f71a">columnas</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  {<span class="charliteral">&#39;1&#39;</span>,<span class="charliteral">&#39;2&#39;</span>,<span class="charliteral">&#39;3&#39;</span>,<span class="charliteral">&#39;A&#39;</span>},</div>
+<div class="line">  {<span class="charliteral">&#39;4&#39;</span>,<span class="charliteral">&#39;5&#39;</span>,<span class="charliteral">&#39;6&#39;</span>,<span class="charliteral">&#39;B&#39;</span>},</div>
+<div class="line">  {<span class="charliteral">&#39;7&#39;</span>,<span class="charliteral">&#39;8&#39;</span>,<span class="charliteral">&#39;9&#39;</span>,<span class="charliteral">&#39;C&#39;</span>},</div>
+<div class="line">  {<span class="charliteral">&#39;*&#39;</span>,<span class="charliteral">&#39;0&#39;</span>,<span class="charliteral">&#39;#&#39;</span>,<span class="charliteral">&#39;D&#39;</span>}</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00028">28</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad5a4458b528428839dddbe9b25cd56f2" name="ad5a4458b528428839dddbe9b25cd56f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5a4458b528428839dddbe9b25cd56f2">&#9670;&#160;</a></span>temperaturaDHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float temperaturaDHT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00053">53</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a46b428456d05a4b83837e0734756a07c" name="a46b428456d05a4b83837e0734756a07c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46b428456d05a4b83837e0734756a07c">&#9670;&#160;</a></span>temperaturaIdeal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float temperaturaIdeal</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00054">54</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afcd9a269fb8ae68c122682b48e309553" name="afcd9a269fb8ae68c122682b48e309553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcd9a269fb8ae68c122682b48e309553">&#9670;&#160;</a></span>temperaturaMedia</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float temperaturaMedia</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00054">54</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9a6abe409c5dbfda9c1537e04b1b4c11" name="a9a6abe409c5dbfda9c1537e04b1b4c11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a6abe409c5dbfda9c1537e04b1b4c11">&#9670;&#160;</a></span>temperaturaNTC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float temperaturaNTC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00053">53</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac4394064fbf6bde1ba184aecb9523400" name="ac4394064fbf6bde1ba184aecb9523400"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4394064fbf6bde1ba184aecb9523400">&#9670;&#160;</a></span>temporizador</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">millisDelay temporizador</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html#l00061">61</a> del archivo <a class="el" href="_smart_comfort-_p_m_v_8cpp_source.html">SmartComfort-PMV.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
