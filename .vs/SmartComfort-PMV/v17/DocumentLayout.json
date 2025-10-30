@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Asus\\OneDrive\\Universidad\\Quinto Semestre\\Arquitectura Computacional\\SmartComfort-PMV\\",
+  "WorkspaceRootPath": "C:\\Users\\valen\\Documents\\Universidad\\5TO SEMESTRE\\ARQUITECTURA\\SmartComfort-PMV\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5597B87C-8EF2-4B18-92D8-4CBAEC39E644}|SmartComfort-PMV.vcxproj|C:\\Users\\Asus\\OneDrive\\Universidad\\Quinto Semestre\\Arquitectura Computacional\\SmartComfort-PMV\\SmartComfort-PMV.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5597B87C-8EF2-4B18-92D8-4CBAEC39E644}|SmartComfort-PMV.vcxproj|solutionrelative:SmartComfort-PMV.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\valen\\Documents\\Universidad\\5TO SEMESTRE\\ARQUITECTURA\\SmartComfort-PMV\\SmartComfort-PMV.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartComfort-PMV.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,14 +24,12 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "SmartComfort-PMV.cpp",
-              "DocumentMoniker": "C:\\Users\\Asus\\OneDrive\\Universidad\\Quinto Semestre\\Arquitectura Computacional\\SmartComfort-PMV\\SmartComfort-PMV.cpp",
+              "DocumentMoniker": "C:\\Users\\valen\\Documents\\Universidad\\5TO SEMESTRE\\ARQUITECTURA\\SmartComfort-PMV\\SmartComfort-PMV.cpp",
               "RelativeDocumentMoniker": "SmartComfort-PMV.cpp",
-              "ToolTip": "C:\\Users\\Asus\\OneDrive\\Universidad\\Quinto Semestre\\Arquitectura Computacional\\SmartComfort-PMV\\SmartComfort-PMV.cpp",
+              "ToolTip": "C:\\Users\\valen\\Documents\\Universidad\\5TO SEMESTRE\\ARQUITECTURA\\SmartComfort-PMV\\SmartComfort-PMV.cpp",
               "RelativeToolTip": "SmartComfort-PMV.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-15T02:50:34.37Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T02:50:34.37Z"
             }
           ]
         }
